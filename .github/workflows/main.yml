@@ -27,4 +27,10 @@ jobs:
 
       - name: Publish
         run: dotnet publish -o ./published
-  
+
+      - name: Deploy to Azure App service
+        uses: azure/webapps-deploy@v3
+        with:
+          app-name: EShopWebAppProd
+          publish-profile: EShopWebAppProd.PublishSettings
+      
