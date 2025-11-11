@@ -26,5 +26,5 @@ jobs:
         run: dotnet build --configuration Release --no-restore
 
       - name: Publish
-        run: dotnet publish ./*.csproj -o ./published
+        run: dotnet publish -o ./published
   
